@@ -1,0 +1,44 @@
+.feat-list {
+  display: flex;
+
+  & .title {
+    @include font (700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--title-text-color);
+  }
+
+  & .text {
+    @include font (400, 14px, 1.71, 0.03em);
+    color: var(--secondary-text-collor);
+  }
+}
+
+.feat-list > .item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  & p {
+    margin-top: 10px;
+  }
+}
+
+.feat-icon-list {
+  display: flex;
+}
+
+.feat-icon-box {
+  display: flex;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sec-bgc-color);
+}
+
+.feat-icon {
+  height: 70px;
+  width: 70px;
+}

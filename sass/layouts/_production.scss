@@ -1,0 +1,39 @@
+.production {
+    padding-top: 0;
+}
+
+.production__title {
+    margin-bottom: 50px;
+    font-style: normal;
+    @include font (700, 36px, 1.16, 0.03em);
+    text-align: center;
+}
+
+.production__list {
+    display: flex;
+    li {
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.production__item:not(:first-child) {
+    margin-left: 30px;
+}
+
+.production__thumb p {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    @include font (700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-text-collor);
+    background-color: rgba(47, 48, 58, 0.8);
+}

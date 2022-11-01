@@ -1,0 +1,21 @@
+.logo {
+    display: flex;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-size: 26px;
+    line-height: 1.2;
+
+    color: #2196f3;
+    &:hover,
+    &:focus {
+        color: var(--accent-text-collor);
+    }
+}
+
+.wht {
+    color: var(--white-text-collor);
+}
+
+.blck {
+    color: var(--black-text-collor);
+}
