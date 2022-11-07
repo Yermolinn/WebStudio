@@ -897,9 +897,14 @@ textarea::placeholder {
 }
 
 .features__list {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .features__list {
+    display: flex;
+  }
 }
 
 .features__title {

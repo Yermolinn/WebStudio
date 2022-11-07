@@ -1,7 +1,11 @@
 .features__list {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
-  gap: 30px
+  gap: 30px;
+
+  @include desktop {
+      display: flex
+    }
   // & .title {
   //   @include font (700, 14px, 1.14, 0.03em);
   //   text-transform: uppercase;
@@ -10,6 +14,9 @@
   //     text-align: center;
   //   }
   // }
+   
+  
+  
 }
 
 .features__title {
