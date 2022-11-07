@@ -1,13 +1,36 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+//     @media screen and (min-width: 480px) {
+//         width: 480px;
+//    }
+//         @media screen and (min-width: 768px) {
+//         width: 768px;
+//    }
+
+//     @media screen and (min-width: 1200px) {
+//     width: 1200px;
+//     }
 }
 
 
-.team-title,
-.clients-title {
+.team__title,
+.client__title {
+    width: 100%;
     font-style: normal;
     @include font (700, 36px, 1.16, 0.03em);
     text-align: center;
     color: var(--primary-text-collor);
+
+//         @media screen and (min-width: 480px) {
+//         width: 480px;
+//    }
+//         @media screen and (min-width: 768px) {
+//         width: 768px;
+//    }
+//         @media screen and (min-width: 1200px) {
+//         width: 1200px;
+//     }
 }

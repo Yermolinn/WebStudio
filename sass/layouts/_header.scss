@@ -1,4 +1,4 @@
-.page-header {
+.page__header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -8,70 +8,32 @@
   background-color: var(--white-bgc-collor);
   border-bottom: 1px solid var(--high-line-collor);
   z-index: 1000;
+  
+  @include mobile {
+    width: 480px;
+    height: 60px;
+}
+  @include tablet {
+  width: 768;
+  height: 80px;
+  }
+
+  @include desktop {
+  width: 1600px;
+  height: 80px;
+  }
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
 
 .header__logo {
+  display: block;
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
-.thumb-header {
-  position: relative;
-}
 
-.header-contact-list {
-  margin-left: auto;
-  display: flex;
-}
-
-.header-contact-list a {
-  display: flex;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  color: var(--secondary-text-collor);
-  text-decoration: none;
-  align-items: center;
-  @include font(500, 14px, 1.1, 0.02em);
-  @include animation-color;
-  &:hover,
-  &:focus {
-    color: var(--accent-text-collor);
-  }
-}
-
-.header-mail-item {
-  display: flex;
-}
-
-.mail-icon {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;
-  .header-mail-item:hover &,
-  .header-mail-item:focus & {
-    fill: var(--accent-btn-collor);
-  }
-}
-
-.header-phone-item {
-  display: flex;
-  margin-left: 50px;
-}
-
-.phone-icon {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  fill: currentColor;
-  .header-phone-item:hover &,
-  .header-phone-item:focus & {
-    fill: var(--accent-btn-collor);
-  }
-}

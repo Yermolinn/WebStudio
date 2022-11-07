@@ -1,48 +1,93 @@
-.page-hero {
+.hero {
   background-color: var(--footer-bgc-collor);
-  padding: 200px 0;
-  max-width: 1600px;
-  height: 600px;
+  max-width: 100%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  
+  @include mobile {
+    width: 480px;
+    height: 400px;
+    padding: 118px 0;
+    background-image: var(--gradient-bgc),
+    url(../images/hero-mob.jpg);
+    @include retina {
+    background-image: url(../images/hero-mob-2x.jpg);
+    }
+
+  }
+  
+  @include tablet {
+    width: 768px;
+    height: 400px;
+    padding: 118px 0;
+    background-image: var(--gradient-bgc),
+    url(../images/hero-tab.jpg);
+    @include retina {
+    background-image: url(../images/hero-tab-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+    background-image: var(--gradient-bgc),
+    url(../images/hero-desk.jpg);
+    @include retina {
+    background-image: url(../images/hero-desk-2x.jpg);
+    }
+  }
 }
 
-.hero-container {
-  width: 1600px;
+
+.hero__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include mobile {
+      width: 480px;
+  }
+
+  @include tablet {
+    width: 768;
+  }
+
+  @include desktop {
+    display: block;
+    width: 1200px;
+  }
 }
 
-.hero-title {
-  @include font (900, 44px, 1.36, 0.06em);
+
+.hero__title {
   text-align: center;
   text-transform: uppercase;
   color: var(--white-text-collor);
-  width: 696px;
+  width: 100%;
   margin: 0 auto;
+
+
+    @include mobile {
+    width: 360px;
+    @include font (900, 26px, 1.62, 0.06em);
+    }
+
+    @include tablet {
+    width: 360px;
+    @include font (900, 26px, 1.62, 0.06em);
+    }
+
+    @include desktop {
+      width: 696px;
+    @include font (900, 44px, 1.36, 0.06em);
+    }
 }
 
-.btn-hero {
-  margin: 0 auto;
-  margin-top: 30px;
-  font-family: inherit;
-  @include font (700, 16px, 1.88, 0.06em);
-  align-items: center;
-  text-align: center;
-  color: var(--white-text-collor);
-  background: var(--accent-text-collor);
-  border-radius: 4px;
-  border: none;
-  padding: 10px 32px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: var(--white-text-collor);
-    background-color: var(--accent-btn-collor);
-  }
-}
+

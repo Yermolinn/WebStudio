@@ -1,0 +1,58 @@
+.contact {
+    // display: none;
+  
+    margin-left: auto;
+    margin-bottom: 64px;
+    // display: flex;
+  }
+  
+  .contact a {
+    display: block;
+    margin-bottom: 32px;
+    // padding-top: 24px;
+    // padding-bottom: 25px;
+    color: var(--secondary-text-collor);
+    text-decoration: none;
+    align-items: center;
+    @include animation-color;
+    &:hover,
+    &:focus {
+      color: var(--accent-text-collor);
+    }
+  }
+  
+  .mail {
+    @include font(500, 24px, 1.1, 0.02em);
+
+    // display: flex;
+  }
+  
+  .mail-icon {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+    .mail:hover &,
+    .mail:focus & {
+      fill: var(--accent-btn-collor);
+    }
+  }
+  
+  .phone {
+    @include font(500, 34px, 1.1, 0.02em);
+    
+    // display: flex;
+    // margin-left: 50px;
+  }
+  
+  .phone-icon {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+    .phone:hover &,
+    .phone:focus & {
+      fill: var(--accent-btn-collor);
+    }
+  }
+  

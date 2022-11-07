@@ -1,6 +1,16 @@
 .production {
     padding-top: 0;
+    @include mobile{
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include desktop {
+        display: block;
+    }
 }
+
 
 .production__title {
     margin-bottom: 50px;

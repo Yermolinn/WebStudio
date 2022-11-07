@@ -2,13 +2,18 @@
 @import './base/reset';
 @import './utils/placeholders';
 @import './base/common';
+@import './utils/mixin';
 @import './utils/hidden';
 
 
 @import './components/section';
 @import './components/container';
+@import './components/_mob-menu';
+@import './components/contacts';
 @import './components/logo';
 @import './components/navigation';
+@import './components/btn';
+@import './components/smm';
 @import './components/modal';
 
 

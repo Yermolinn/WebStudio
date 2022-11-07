@@ -1,15 +1,32 @@
-.site-nav {
-    display: flex;
+.menu__box {
+    
+    // display: none;
+//   position: relative;
+
 }
 
-.site-nav .item:not(:first-child) {
-    margin-left: 50px;
+.mob-menu__nav {
+    // display: none;
+    // display: flex;
+    // margin-bottom: 300px;
 }
 
-.nav-link {
+// .nav__list {
+//     display: flex;
+// }
+
+.nav__item {
+    // margin-right: 50px;
+    &:not(:last-child) {
+    margin-bottom: 32px;
+    }
+
+}
+
+.nav__link {
     position: relative;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
     text-decoration: none;
     @include font (500, 14px, 1.1, 0.02em);
     color: var(--primary-text-collor);
@@ -19,9 +36,19 @@
     &:focus {
     color: var(--accent-text-collor);
     }
+
+    @include mobile {
+        @include font (500, 40px, 1.1, 0.02em);
+
+        }
+    
+        @include tablet {
+        @include font (500, 40px, 1.1, 0.02em);
+
+        }
 }
 
-.nav-link.current {
+.nav__link.current {
     color: var(--accent-text-collor);
     position: relative;
 

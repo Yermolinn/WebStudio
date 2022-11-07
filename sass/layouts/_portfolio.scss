@@ -1,4 +1,5 @@
-.btn-portfolio {
+.portfolio__btn-list {
+  gap: 8px;
   margin-bottom: 50px;
   display: flex;
   align-items: center;
@@ -9,63 +10,48 @@
   color: var(--white-text-collor);
 }
 
-.btn-portfolio li {
-  margin-left: 8px;
-}
 
-.filter-btn {
-  padding: 6px 22px;
-  display: flex;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.8;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--primary-text-collor);
-  background: var(--sec-bgc-color);
-  border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  .btn-portfolio &:hover,
-  .btn-portfolio &:focus {
-    color: var(--white-text-collor);
-    background: var(--accent-btn-collor);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
-  &.current {
-    color: var(--white-text-collor);
-    background: var(--accent-text-collor);
-  }
-}
 
-.portfolio-list {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin: 0 auto;
+  gap: 30px;
+  // margin-left: -30px;
+  // margin-top: -30px;
 }
 
-.portfolio-list > .item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+.portfolio__item {
+width: 100%;
+
+
+@media screen and (min-width: 480px) {
+  flex-wrap: wrap;
+  width: 450px;
+}
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    @include calc (2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include calc (3);
+      }
 }
 
-.portfolio-element {
+.project__info {
+  width: 100%;
   border: 1px solid #eeeeee;
   padding: 20px 24px;
   border-top: none;
 }
 
-.portfolio-element h2 {
+.project__info h2 {
   margin-bottom: 4px;
 }
 
-.portfolio-list .title {
+.project__title {
+  width: 100%;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -73,7 +59,8 @@
   color: var(--primary-text-collor);
 }
 
-.portfolio-list .text {
+.project__text {
+  width: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -81,7 +68,7 @@
   color: var(--secondary-text-collor);
 }
 
-.portfolio-list > .item a {
+.portfolio__link {
   text-decoration: none;
   display: block;
   align-items: center;
@@ -99,7 +86,7 @@
   overflow: hidden;
 }
 
-.portfolio-action-text {
+.portfolio__text-action {
   position: absolute;
   top: 0;
   right: 0;
@@ -115,8 +102,8 @@
   text-align: left;
   transform: translatey(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  .portfolio-list > .item a:hover &,
-  .portfolio-list > .item a:focus & {
+  .portfolio__link:hover &,
+  .portfolio__link:focus & {
     transform: translatey(0);
   }
 }
