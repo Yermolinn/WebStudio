@@ -763,9 +763,10 @@ textarea {
 .portfolio__item {
   position: relative;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .portfolio__item {
     flex-wrap: wrap;
+    justify-content: center;
     width: 450px;
   }
 }
