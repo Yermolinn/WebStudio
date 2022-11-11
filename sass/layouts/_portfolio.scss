@@ -1,16 +1,42 @@
+.portfolio {
+  @media screen and (max-width: 480px) {
+    margin-top: 60px;
+  }
+
+  @include tablet {
+    margin-top: 80px;
+    justify-content: center;
+  }
+
+  @include desktop {
+    margin-top: 80px;
+    justify-content: center;
+  }
+}
+
 .portfolio__btn-list {
   gap: 8px;
   margin-bottom: 50px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   align-self: center;
   text-align: center;
-  justify-content: center;
   letter-spacing: 0.03em;
   color: var(--white-text-collor);
+
+  @media screen and (max-width: 480px) {
+    justify-content: flex-start;
+  }
+
+  @include tablet {
+    justify-content: center;
+  }
+
+  @include desktop {
+    justify-content: center;
+  }
 }
-
-
 
 .portfolio__list {
   display: flex;
@@ -22,21 +48,21 @@
 }
 
 .portfolio__item {
-width: 100%;
+  position: relative;
 
-
-@media screen and (min-width: 480px) {
-  flex-wrap: wrap;
-  width: 450px;
-}
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 480px) {
     flex-wrap: wrap;
-    @include calc (2);
+    width: 450px;
   }
 
-  @media screen and (min-width: 1200px) {
-    @include calc (3);
-      }
+  @include tablet {
+    flex-wrap: wrap;
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .project__info {

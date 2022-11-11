@@ -1,39 +1,66 @@
-.page__header {
+.header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
+
   top: 0;
   left: 50%;
   transform: translate(-50%);
   min-height: var(--header-height);
   background-color: var(--white-bgc-collor);
   border-bottom: 1px solid var(--high-line-collor);
-  z-index: 1000;
-  
-  @include mobile {
-    width: 480px;
-    height: 60px;
+  z-index: 10000;
 }
-  @include tablet {
-  width: 768;
-  height: 80px;
-  }
 
-  @include desktop {
-  width: 1600px;
-  height: 80px;
+.menu {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin-left: 88px;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }
 
 .header__container {
   display: flex;
+  position: relative;
   align-items: center;
+
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include mobile {
+    width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 .header__logo {
   display: block;
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
-
-

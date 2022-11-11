@@ -19,51 +19,124 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/portfolio.min.css" />
+    <link rel="stylesheet" href="./js/mob-menu.js" />
   </head>
   <body>
     <!--Шапка-сайту-->
-    <!-- <header class="page-header">
-      <div class="container header-container">
-        <a href="./index.html" class="header__logo logo"><span class="blck">Web</span><span>Studio</span></a>
-        <div class="thumb-header">
-          <nav class="site-nav">
-            <ul class="site-nav list">
-              <li class="item">
-                <a href="./index.html" class="nav-link">Студія</a>
+    <header class="header">
+      <div class="header__container">
+        <a href="./index.html" class="header__logo logo"
+          ><span class="blck">Web</span><span>Studio</span></a
+        >
+
+        <div class="menu">
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Студія</a>
               </li>
-              <li class="item">
-                <a href="./portfolio.html" class="nav-link current">Портфоліо</a>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link current">Портфоліо</a>
               </li>
-              <li class="item">
-                <a href="./index.html" class="nav-link">Контакти</a>
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Контакти</a>
               </li>
             </ul>
           </nav>
+
+          <div class="contact">
+            <ul class="contact__list list">
+              <li class="mail__item">
+                <a href="mailto:info@devstudio.com">
+                  <svg class="mail-icon">
+                    <use href="./images/icons.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="phone__item">
+                <a href="tel:+380961111111">
+                  <svg class="phone-icon">
+                    <use xlink:href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="header-contact-list list">
-          <li class="header-mail-item">
-            <a href="mailto:info@devstudio.com">
-              <svg class="mail-icon">
-                <use href="./images/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-phone-item">
-            <a href="tel:+380961111111">
-              <svg class="phone-icon">
-                <use xlink:href="./images/icons.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+
+        <button
+          type="button"
+          class="menu-open-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mob-menu"
+        >
+          <svg width="40px" height="40px">
+            <use xlink:href="./images/icons.svg#icon-menu-btn"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <!--Mob-Menu-->
+      <div class="mob-menu js-menu-container" id="mob-menu">
+        <div class="mob-menu__container">
+          <div class="mob-menu__top">
+            <button type="button" class="menu-toggle js-close-menu">
+              <svg width="40px" height="40px">
+                <use xlink:href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="mob-nav">
+              <ul class="mob-nav__list list">
+                <li class="mob-nav__item">
+                  <a href="./index.html" class="mob-nav__link">Студія</a>
+                </li>
+                <li class="mob-nav__item">
+                  <a href="./portfolio.html" class="mob-nav__link">Портфоліо</a>
+                </li>
+                <li class="mob-nav__item">
+                  <a href="./index.html" class="mob-nav__link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="mob-menu__bottom">
+            <ul class="mob-contact list">
+              <li>
+                <a class="mob-phone" href="tel:+380961111111"> +38 096 111 11 11 </a>
+              </li>
+              <li>
+                <a class="mob-mail" href="mailto:info@devstudio.com"> info@devstudio.com </a>
+              </li>
+            </ul>
+
+            <ul class="menu__smm-list list">
+              <li>
+                <a class="menu__smm-link" href="">Instagram</a>
+              </li>
+              <span class="smm__item">|</span>
+              <li>
+                <a class="menu__smm-link" href="">Twitter</a>
+              </li>
+              <span class="smm__item">|</span>
+              <li>
+                <a class="menu__smm-link" href="">Facebook</a>
+              </li>
+              <span class="smm__item">|</span>
+              <li>
+                <a class="menu__smm-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <!--Портфоліо-->
     <main>
       <h1 class="visually-hidden">Портфоліо</h1>
-      <section class="section">
+      <section class="section portfolio">
         <div class="container">
           <ul class="list portfolio__btn-list">
             <li><button class="btn__filter" type="button">Усі</button></li>
@@ -86,6 +159,8 @@
                 <div class="project__info">
                   <h2 class="project__title">Технокряк</h2>
                   <p class="project__text">Веб-дизайн</p>
+
+
                 </div>
               </a>
             </li>
@@ -119,6 +194,8 @@
                 <div class="project__info">
                   <h2 class="project__title">Ресторан Seafood</h2>
                   <p class="project__text">Додаток</p>
+
+
                 </div>
               </a>
             </li>
@@ -230,14 +307,14 @@
     </main>
     <!--Підвал-сайту-->
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container">
         <div class="adress__box">
           <a href="./index.html" class="logo logo-footer"
             ><span>Web</span><span class="wht">Studio</span></a
           >
           <address class="adress">
             <ul class="adress__list list">
-              <li class="adress__item">
+              <li class="adress__street">
                 <a
                   href="https://goo.gl/maps/UaeHGTFbajZYQoQx9"
                   target="_blank"
@@ -296,7 +373,7 @@
         </div>
 
         <div class="subscribe__box">
-          <form class="js-speaker-form">
+          <form class="subscribe__form js-speaker-form">
             <label class="subscribe__text" for="subscribe">Підпишіться на розсилку</label>
             <div class="subscribe">
               <input
@@ -307,7 +384,8 @@
                 placeholder="E-mail"
                 required
               />
-              <button type="submit" class="btn__subscribe">Підписатися 
+              <button type="submit" class="btn__subscribe">
+                Підписатися
                 <svg class="icon-subscribe">
                   <use xlink:href="./images/icons.svg#icon-subscribe"></use>
                 </svg>
@@ -335,6 +413,41 @@
           new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
 
           e.currentTarget.reset();
+        });
+      })();
+    </script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      (() => {
+        const mobileMenu = document.querySelector('.js-menu-container');
+        const openMenuBtn = document.querySelector('.js-open-menu');
+        const closeMenuBtn = document.querySelector('.js-close-menu');
+
+        const toggleMenu = () => {
+          const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+          openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+          mobileMenu.classList.toggle('is-open');
+
+          const scrollLockMethod = !isMenuOpen ? 'disableBodyScroll' : 'enableBodyScroll';
+          bodyScrollLock[scrollLockMethod](document.body);
+        };
+
+        openMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close the mobile menu on wider screens if the device orientation changes
+        window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+          if (!e.matches) return;
+          mobileMenu.classList.remove('is-open');
+          openMenuBtn.setAttribute('aria-expanded', false);
+          bodyScrollLock.enableBodyScroll(document.body);
         });
       })();
     </script>

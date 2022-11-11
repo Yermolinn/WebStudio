@@ -19,24 +19,24 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./modal.js" />
-    <link rel="stylesheet" href="./menu.js" />
+    <link rel="stylesheet" href="./js/modal.js" />
+    <link rel="stylesheet" href="./js/mob-menu.js" />
+    <!-- <link rel="stylesheet" href="./js/menu.js" /> -->
   </head>
+
   <body>
     <!--Шапка-сайту-->
-    <header class="page__header">
-      <div class="container header__container">
-        <a href="./index.html" class="header__logo logo"><span class="blck">Web</span><span>Studio</span></a>
-        <button menu-open type="menu" class="menu-open-btn">0</button>
-      </div>
+    <header class="header">
+      <div class="header__container">
+        <a href="./index.html" class="header__logo logo"
+          ><span class="blck">Web</span><span>Studio</span></a
+        >
 
-      <div data-menu class="mob-menu is-hidden">
-        <button menu-close type="button" class="menu-close-btn">x</button>
-        <div>
-          <nav class="mob-menu__nav">
+        <div class="menu">
+          <nav class="nav">
             <ul class="nav__list list">
               <li class="nav__item">
-                <a href="./index.html" class="nav__link">Студія</a>
+                <a href="./index.html" class="nav__link current">Студія</a>
               </li>
               <li class="nav__item">
                 <a href="./portfolio.html" class="nav__link">Портфоліо</a>
@@ -46,41 +46,95 @@
               </li>
             </ul>
           </nav>
-        </div>
 
-        <div>
-          <ul class="contact list">
-              <li class="phone">
-                <a href="tel:+380961111111">
-                  +38 096 111 11 11
-                </a>
-              </li>
-              <li class="mail">
+          <div class="contact">
+            <ul class="contact__list list">
+              <li class="mail__item">
                 <a href="mailto:info@devstudio.com">
+                  <svg class="mail-icon">
+                    <use href="./images/icons.svg#icon-mail"></use>
+                  </svg>
                   info@devstudio.com
                 </a>
               </li>
-          </ul>
-    
-          <ul class="menu__smm-list list">
-            <li>
-              <a class="menu__smm-link" href="">Instagram</a>
-            </li>
-            <span>|</span>
-            <li>
-              <a class="menu__smm-link" href="">Twitter</a>
-            </li>
-            <span>|</span>
-            <li>
-              <a class="menu__smm-link" href="">Facebook</a>
-            </li>
-            <span>|</span>
-            <li>
-              <a class="menu__smm-link" href="">LinkedIn</a>
-            </li>
-          </ul>
+              <li class="phone__item">
+                <a href="tel:+380961111111">
+                  <svg class="phone-icon">
+                    <use xlink:href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div> 
+
+        <button
+          type="button"
+          class="menu-open-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mob-menu"
+        >
+          <svg width="40px" height="40px">
+            <use xlink:href="./images/icons.svg#icon-menu-btn"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!--Mob-Menu-->
+      <div class="mob-menu js-menu-container" id="mob-menu">
+        <div class="mob-menu__container">
+          <div class="mob-menu__top">
+            <button type="button" class="menu-toggle js-close-menu">
+              <svg width="40px" height="40px">
+                <use xlink:href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="mob-nav">
+              <ul class="mob-nav__list list">
+                <li class="mob-nav__item">
+                  <a href="./index.html" class="mob-nav__link">Студія</a>
+                </li>
+                <li class="mob-nav__item">
+                  <a href="./portfolio.html" class="mob-nav__link">Портфоліо</a>
+                </li>
+                <li class="mob-nav__item">
+                  <a href="./index.html" class="mob-nav__link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="mob-menu__bottom">
+            <ul class="mob-contact list">
+              <li>
+                <a class="mob-phone" href="tel:+380961111111"> +38 096 111 11 11 </a>
+              </li>
+              <li>
+                <a class="mob-mail" href="mailto:info@devstudio.com"> info@devstudio.com </a>
+              </li>
+            </ul>
+
+            <ul class="menu__smm-list list">
+              <li>
+                <a class="menu__smm-link" href="">Instagram</a>
+              </li>
+              <span class="smm__item">|</span>
+              <li>
+                <a class="menu__smm-link" href="">Twitter</a>
+              </li>
+              <span class="smm__item">|</span>
+              <li>
+                <a class="menu__smm-link" href="">Facebook</a>
+              </li>
+              <span class="smm__item">|</span>
+              <li>
+                <a class="menu__smm-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
     <!--Головний-контент-->
     <main>
@@ -90,7 +144,7 @@
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button data-modal-open class="btn__hero" type="button">Замовити послугу</button>
         </div>
-      <!--Модальне вікно-->
+        <!--Модальне вікно-->
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button data-modal-close class="btn__esc">
@@ -105,7 +159,7 @@
                 <svg class="backdrop-icon">
                   <use xlink:href="./images/icons.svg#icon-modal-name"></use>
                 </svg>
-                <input class="form__input" type="text" name="user-name" id="user-name" required/>
+                <input class="form__input" type="text" name="user-name" id="user-name" required />
               </div>
 
               <div class="form__field">
@@ -113,7 +167,7 @@
                 <svg class="backdrop-icon">
                   <use xlink:href="./images/icons.svg#icon-modal-tel"></use>
                 </svg>
-                <input class="form__input" type="tel" name="tel" id="tel" required/>
+                <input class="form__input" type="tel" name="tel" id="tel" required />
               </div>
 
               <div class="form__field">
@@ -158,9 +212,9 @@
           </div>
         </div>
       </section>
-      
+
       <!--Переваги-->
-      <section class="section">
+      <section class="section features__page">
         <div class="container">
           <h2 class="visually-hidden">Переваги</h2>
           <ul class="features__list list">
@@ -195,7 +249,9 @@
                 </svg>
               </div>
               <h3 class="features__title">Планування</h3>
-              <p class="features__text">Так само консультація з широким активом значною мірою зумовлює.</p>
+              <p class="features__text">
+                Так само консультація з широким активом значною мірою зумовлює.
+              </p>
             </li>
 
             <li class="features__item">
@@ -212,7 +268,7 @@
           </ul>
         </div>
       </section>
-      
+
       <!--Чим-займаємося-->
       <section class="section production">
         <div class="container">
@@ -220,54 +276,60 @@
           <ul class="production__list list">
             <li class="production__item">
               <div class="production__thumb">
-                <picture>
-                  <source srcset="./images/prod/prod-1.jpg 1x,
-                  ./images/prod-2x/prod-1-2x x2" 
-                  @media="(min-width: 1200px)"
-                  />
                 <img
-                  width="370" height="294" 
+                  srcset="./images/prod/prod-1.jpg 1x, ./images/prod/retina/prod-1-2x.jpg 2x"
                   src="./images/prod/prod-1.jpg"
-                  srcset="./images/prod-2x/prod-1-2x 2x"
-                  alt="production-1" 
+                  width="370"
+                  height="294"
+                  alt="production-1"
                 />
-                </picture>
+
                 <p>Десктопні додатки</p>
               </div>
             </li>
 
             <li class="production__item">
               <div class="production__thumb">
-                <img 
-                src="./images/prod/prod-2.jpg" 
-                alt="production-2" width="370" height="294" />
+                <img
+                  srcset="./images/prod/prod-2.jpg 1x, ./images/prod/retina/prod-2-2x.jpg 2x"
+                  src="./images/prod/prod-2.jpg"
+                  alt="production-2"
+                  width="370"
+                  height="294"
+                />
                 <p>Мобільні додатки</p>
               </div>
             </li>
 
             <li class="production__item">
               <div class="production__thumb">
-                <img 
-                src="./images/prod/prod-3.jpg" 
-                alt="production-3" width="370" height="294" />
+                <img
+                  srcset="./images/prod/prod-3.jpg 1x, ./images/prod/retina/prod-3-2x.jpg 2x"
+                  src="./images/prod/prod-3.jpg"
+                  alt="production-3"
+                  width="370"
+                  height="294"
+                />
                 <p>Дизайнерські рішення</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      
+
       <!--Наша-команда-->
       <section class="team section">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list list">
             <li class="specialist__box">
-              <img 
-                src="./images/team-1.jpg" 
-                alt="our-team-1" 
-                width="270" 
-                height="260" />
+              <img
+                srcset="./images/team/team-1.jpg 1x, ./images/team/team-retina/team-1-2x.jpg 2x"
+                src="./images/tea/team-1.jpg"
+                alt="our-team-1"
+                width="270"
+                height="260"
+              />
               <div class="specialist__info">
                 <h3 class="name">Ігор Дем'яненко</h3>
                 <p class="specialisation">Product Designer</p>
@@ -308,11 +370,13 @@
             </li>
 
             <li class="specialist__box">
-              <img 
-                src="./images/team-2.jpg" 
-                alt="our-team-2" 
-                width="270" 
-                height="260" />
+              <img
+                srcset="./images/team/team-2.jpg 1x, ./images/team/team-retina/team-2-2x.jpg 2x"
+                src="./images/team-2.jpg"
+                alt="our-team-2"
+                width="270"
+                height="260"
+              />
               <div class="specialist__info">
                 <h3 class="name">Ольга Рєпіна</h3>
                 <p class="specialisation">Frontend Developer</p>
@@ -353,11 +417,13 @@
             </li>
 
             <li class="specialist__box">
-              <img 
-                src="./images/team-3.jpg" 
-                alt="our-team-3" 
-                width="270" 
-                height="260" />
+              <img
+                srcset="./images/team/team-3.jpg 1x, ./images/team/team-retina/team-3-2x.jpg 2x"
+                src="./images/team-3.jpg"
+                alt="our-team-3"
+                width="270"
+                height="260"
+              />
               <div class="specialist__info">
                 <h3 class="name">Микола Тарасов</h3>
                 <p class="specialisation">Marketing</p>
@@ -398,11 +464,13 @@
             </li>
 
             <li class="specialist__box">
-              <img 
-                src="./images/team-4.jpg" 
-                alt="our-team-4" 
-                width="270" 
-                height="260" />
+              <img
+                srcset="./images/team/team-4.jpg 1x, ./images/team/team-retina/team-4-2x.jpg 2x"
+                src="./images/team-4.jpg"
+                alt="our-team-4"
+                width="270"
+                height="260"
+              />
               <div class="specialist__info">
                 <h3 class="name">Михайло Єрмаков</h3>
                 <p class="specialisation">UI Designer</p>
@@ -503,14 +571,14 @@
 
     <!--Підвал-сайту-->
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container">
         <div class="adress__box">
           <a href="./index.html" class="logo logo-footer"
             ><span>Web</span><span class="wht">Studio</span></a
           >
           <address class="adress">
             <ul class="adress__list list">
-              <li class="adress__item">
+              <li class="adress__street">
                 <a
                   href="https://goo.gl/maps/UaeHGTFbajZYQoQx9"
                   target="_blank"
@@ -569,7 +637,7 @@
         </div>
 
         <div class="subscribe__box">
-          <form class="js-speaker-form">
+          <form class="subscribe__form js-speaker-form">
             <label class="subscribe__text" for="subscribe">Підпишіться на розсилку</label>
             <div class="subscribe">
               <input
@@ -580,7 +648,8 @@
                 placeholder="E-mail"
                 required
               />
-              <button type="submit" class="btn__subscribe">Підписатися 
+              <button type="submit" class="btn__subscribe">
+                Підписатися
                 <svg class="icon-subscribe">
                   <use xlink:href="./images/icons.svg#icon-subscribe"></use>
                 </svg>
@@ -591,14 +660,14 @@
       </div>
     </footer>
 
-    <script>
+    <!-- <script>
       const { height: pageHeaderHeight } = document
 
         .querySelector('.page-header')
         .getBoundingClientRect();
 
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
-    </script>
+    </script> -->
 
     <script>
       const refs = {
@@ -627,21 +696,39 @@
       })();
     </script>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
     <script>
       (() => {
-  const refs = {
-    openMenuBtn: document.querySelector('[menu-open]'),
-    closeMenuBtn: document.querySelector('[menu-close]'),
-    menu: document.querySelector('[data-menu]'),
-  };
+        const mobileMenu = document.querySelector('.js-menu-container');
+        const openMenuBtn = document.querySelector('.js-open-menu');
+        const closeMenuBtn = document.querySelector('.js-close-menu');
 
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+        const toggleMenu = () => {
+          const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+          openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+          mobileMenu.classList.toggle('is-open');
 
-  function toggleMenu() {
-    refs.menu.classList.toggle('is-hidden');
-  }
-})();
+          const scrollLockMethod = !isMenuOpen ? 'disableBodyScroll' : 'enableBodyScroll';
+          bodyScrollLock[scrollLockMethod](document.body);
+        };
+
+        openMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close the mobile menu on wider screens if the device orientation changes
+        window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+          if (!e.matches) return;
+          mobileMenu.classList.remove('is-open');
+          openMenuBtn.setAttribute('aria-expanded', false);
+          bodyScrollLock.enableBodyScroll(document.body);
+        });
+      })();
     </script>
   </body>
 </html>
