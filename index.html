@@ -86,7 +86,7 @@
         <div class="mob-menu__container">
           <div class="mob-menu__top">
             <button type="button" class="menu-toggle js-close-menu">
-              <svg width="40px" height="40px">
+              <svg width="40px" height="40px" class="menu-close-icon">
                 <use xlink:href="./images/icons.svg#icon-close"></use>
               </svg>
             </button>
@@ -670,18 +670,22 @@
     </script> -->
 
     <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-modal-open]'),
-        closeModalBtn: document.querySelector('[data-modal-close]'),
-        modal: document.querySelector('[data-modal]'),
-      };
+  (() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-modal-open]'),
+      closeModalBtn: document.querySelector('[data-modal-close]'),
+      modal: document.querySelector('[data-modal]'),
+      body: document.querySelector('body'),
+    };
 
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
 
-      function toggleModal() {
-        refs.modal.classList.toggle('is-hidden');
-      }
+    function toggleModal() {
+      refs.modal.classList.toggle('is-hidden');
+      refs.body.classList.toggle('no-scroll');
+    }
+  })();
     </script>
 
     <script>
