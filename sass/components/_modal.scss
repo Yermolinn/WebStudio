@@ -52,17 +52,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 50;
+  overflow: auto;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
     width: 450px;
   }
-  @media screen and (min-width: 768px) {
-    width: 458px;
+ 
 
     @media screen and (min-width: 1200px) {
       width: 528px;
     }
-  }
+
 }
 
 .modal-text {
