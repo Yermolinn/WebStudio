@@ -2,35 +2,32 @@
   display: block;
   background-color: var(--footer-bgc-collor);
   height: 100%;
-margin: 0 auto;
+  margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
-    @media screen and (max-width: 767px) {
+
+  @media screen and (max-width: 767px) {
     margin-top: 60px;
     max-width: 480px;
     height: 400px;
     padding: 118px 0;
-    background-image: var(--gradient-bgc),
-    url(../images/hero-mob.jpg);
+    background-image: var(--gradient-bgc), url(../images/hero-mob.jpg);
     @include retina {
-    background-image: var(--gradient-bgc), url(../images/hero-mob-2x.jpg);
-    background-size: cover;
+      background-image: var(--gradient-bgc), url(../images/hero-mob-2x.jpg);
+      background-size: cover;
     }
-
   }
-  
+
   @include tablet {
     margin-top: 80px;
     max-width: 768px;
     height: 400px;
     padding: 118px 0;
-    background-image: var(--gradient-bgc),
-    url(../images/hero-tab.jpg);
+    background-image: var(--gradient-bgc), url(../images/hero-tab.jpg);
     @include retina {
-    background-image: var(--gradient-bgc), url(../images/hero-tab-2x.jpg);
-    background-size: cover;
+      background-image: var(--gradient-bgc), url(../images/hero-tab-2x.jpg);
+      background-size: cover;
     }
   }
 
@@ -39,15 +36,13 @@ margin: 0 auto;
     max-width: 1600px;
     height: 600px;
     padding: 200px 0;
-    background-image: var(--gradient-bgc),
-    url(../images/hero-desk.jpg);
+    background-image: var(--gradient-bgc), url(../images/hero-desk.jpg);
     @include retina {
-    background-image: var(--gradient-bgc), url(../images/hero-desk-2x.jpg);
-    background-size: cover;
+      background-image: var(--gradient-bgc), url(../images/hero-desk-2x.jpg);
+      background-size: cover;
     }
   }
 }
-
 
 .hero__container {
   display: flex;
@@ -57,7 +52,7 @@ margin: 0 auto;
   padding: 0 15px;
 
   @include mobile {
-      width: 480px;
+    width: 480px;
   }
 
   @include tablet {
@@ -71,29 +66,24 @@ margin: 0 auto;
   }
 }
 
-
 .hero__title {
   text-align: center;
   text-transform: uppercase;
   color: var(--white-text-collor);
-  width: 100%;
   margin: 0 auto;
 
-
-    @include mobile {
+  @media screen and (max-width: 767px) {
     width: 360px;
-    @include font (900, 26px, 1.62, 0.06em);
-    }
+    @include font(900, 26px, 1.62, 0.06em);
+  }
 
-    @include tablet {
+  @include tablet {
     width: 360px;
-    @include font (900, 26px, 1.62, 0.06em);
-    }
+    @include font(900, 26px, 1.62, 0.06em);
+  }
 
-    @include desktop {
-      width: 696px;
-    @include font (900, 44px, 1.36, 0.06em);
-    }
+  @include desktop {
+    width: 696px;
+    @include font(900, 44px, 1.36, 0.06em);
+  }
 }
-
-

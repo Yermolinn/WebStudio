@@ -1,14 +1,21 @@
 .logo {
     display: flex;
     text-decoration: none;
-    font-family: 'Raleway';
-    font-size: 26px;
+    font-family: "Raleway";
     line-height: 1.2;
 
     color: #2196f3;
     &:hover,
     &:focus {
         color: var(--accent-text-collor);
+    }
+
+    @media screen and (max-width: 1200px) {
+        @include font(700, 24px, 1.2, 0.06em);
+    }
+
+    @include desktop {
+        @include font(700, 26px, 1.2, 0.06em);
     }
 }
 

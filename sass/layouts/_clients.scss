@@ -1,7 +1,14 @@
 .client__title {
     margin-bottom: 50px;
     text-align: center;
-    
+
+    @media screen and (max-width: 1200px) {
+        @include font(700, 28px, 1.16, 0.03em);
+    }
+
+    @include desktop {
+        @include font(700, 36px, 1.16, 0.03em);
+    }
 }
 
 .client__list {
@@ -12,7 +19,7 @@
 
     @media screen and (min-width: 1200px) {
         flex-wrap: nowrap;
-        }
+    }
 }
 
 .client__box {
@@ -22,13 +29,13 @@
         flex-wrap: wrap;
         width: 210px;
     }
-        @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
         display: inline-block;
-        width: calc((100% - 30px) / 2);
+        width: calc((100% - 60px) / 3);
 
         @media screen and (min-width: 1200px) {
-            width: calc((100% - 150px) / 6)
-            }
+            width: calc((100% - 150px) / 6);
+        }
     }
 }
 
@@ -47,7 +54,6 @@
         border-color: var(--accent-btn-collor);
         color: var(--accent-btn-collor);
     }
-
 }
 
 .client__icon {

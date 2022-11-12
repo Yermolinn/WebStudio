@@ -1,26 +1,24 @@
-@import './utils/vars';
-@import './base/reset';
-@import './utils/placeholders';
-@import './base/common';
-@import './utils/mixin';
-@import './utils/hidden';
+@import "./utils/vars";
+@import "./base/reset";
+@import "./utils/placeholders";
+@import "./base/common";
+@import "./utils/mixin";
+@import "./utils/hidden";
 
+@import "./components/section";
+@import "./components/container";
+@import "./components/_mob-menu";
+@import "./components/contacts";
+@import "./components/logo";
+@import "./components/navigation";
+@import "./components/btn";
+@import "./components/smm";
+@import "./components/modal";
 
-@import './components/section';
-@import './components/container';
-@import './components/_mob-menu';
-@import './components/contacts';
-@import './components/logo';
-@import './components/navigation';
-@import './components/btn';
-@import './components/smm';
-@import './components/modal';
-
-
-@import './layouts/header';
-@import './layouts/hero';
-@import './layouts/features';
-@import './layouts/production';
-@import './layouts/team';
-@import './layouts/clients';
-@import './layouts/footer';
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/features";
+@import "./layouts/production";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/footer";

@@ -1,37 +1,30 @@
 .features__page {
-
-        // @media screen and (min-width: 767px) {
-        //     display: none;
-        //   }
-
+  // @media screen and (min-width: 767px) {
+  //     display: none;
+  //   }
 
   @include desktop {
     display: flex;
     flex-wrap: wrap;
   }
-
 }
-
-
-
-
 
 .features__list {
   gap: 30px;
 
-@include mobile {
+  @include mobile {
     display: block;
-}
+  }
 
-@include tablet {
-  display: flex;
-  flex-wrap: wrap;
-}
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   @include desktop {
-      display: flex;
-  flex-wrap: wrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
+  }
   // & .title {
   //   @include font (700, 14px, 1.14, 0.03em);
   //   text-transform: uppercase;
@@ -40,35 +33,23 @@
   //     text-align: center;
   //   }
   // }
-   
-  
-  
 }
 
 .features__title {
-  @include font (700, 14px, 1.14, 0.03em);
-    text-transform: uppercase;
-    color: var(--title-text-color);
-    text-align: center;
-
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--title-text-color);
+  text-align: center;
 }
 
 .features__text {
-
-@media screen and (max-width: 767px) {
-  margin-bottom: 30px;
-
+  @include font(400, 14px, 1.71, 0.03em);
+  color: var(--secondary-text-collor);
 }
-
-    @include font (400, 14px, 1.71, 0.03em);
-    color: var(--secondary-text-collor);
-  }
-
 
 //   @media (max-width: 480px) {
 //     flex-wrap: wrap;
 // }
-
 
 // @media (min-width: 480px) {
 //   .feat-list {
@@ -78,45 +59,27 @@
 //   }
 // }
 
-
-
-
-
 .features__item {
-
   @include mobile {
     width: 450px;
-    } 
-    @include tablet {
+  }
+  @include tablet {
     flex-wrap: wrap;
     width: calc((100% - 30px) / 2);
-    }
-     @include desktop {
-      width: calc((100% - 90px) / 4);
-    }
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 
   & p {
     margin-top: 10px;
   }
-
-  // @media (min-width: 480px) {
-  //   width: calc(100% - 450px) / 4;
-  // }
-  
-  //   @media screen and (min-width: 768px) {
-  //   width: calc(100% - 354px) / 4;
-  
-  // }
-  //    @media screen and (min-width: 1140px) {
-  //   width: 270px;
-  // }
-   
-
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
 }
-
-// .feat-icon-list {
-//   display: flex;
-// }
 
 .features__icon-bgc {
   display: flex;

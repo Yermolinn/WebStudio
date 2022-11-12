@@ -2,24 +2,4 @@
     margin: 0 auto;
     padding-top: 60px;
     padding-bottom: 60px;
-
-
-        @media screen and (max-width: 1200px) {
-            padding: 60px 0;
-            }
-        
-            @include desktop {
-                padding: 93px 0;
-            }
-}
-
-
-.team__title,
-.client__title {
-    width: 100%;
-    font-style: normal;
-    @include font (700, 36px, 1.16, 0.03em);
-    text-align: center;
-    color: var(--primary-text-collor);
-
 }

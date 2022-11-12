@@ -75,66 +75,68 @@
           aria-expanded="false"
           aria-controls="mob-menu"
         >
-          <svg width="40px" height="40px">
+          <svg width="24px" height="16px">
             <use xlink:href="./images/icons.svg#icon-menu-btn"></use>
           </svg>
         </button>
       </div>
 
       <!--Mob-Menu-->
-      <div class="mob-menu js-menu-container" id="mob-menu">
-        <div class="mob-menu__container">
-          <div class="mob-menu__top">
-            <button type="button" class="menu-toggle js-close-menu">
-              <svg width="40px" height="40px" class="menu-close-icon">
-                <use xlink:href="./images/icons.svg#icon-close"></use>
-              </svg>
-            </button>
-            <nav class="mob-nav">
-              <ul class="mob-nav__list list">
-                <li class="mob-nav__item">
-                  <a href="./index.html" class="mob-nav__link">Студія</a>
+
+        <div class="mob-menu js-menu-container" id="mob-menu">
+          <div class="mob-menu__container">
+            <div class="mob-menu__top">
+              <button type="button" class="menu-toggle js-close-menu">
+                <svg width="18px" height="18px" class="menu-close-icon">
+                  <use xlink:href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+              <nav class="mob-nav">
+                <ul class="mob-nav__list list">
+                  <li class="mob-nav__item">
+                    <a href="./index.html" class="mob-nav__link">Студія</a>
+                  </li>
+                  <li class="mob-nav__item">
+                    <a href="./portfolio.html" class="mob-nav__link">Портфоліо</a>
+                  </li>
+                  <li class="mob-nav__item">
+                    <a href="./index.html" class="mob-nav__link">Контакти</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="mob-menu__bottom">
+              <ul class="mob-contact list">
+                <li>
+                  <a class="mob-phone" href="tel:+380961111111"> +38 096 111 11 11 </a>
                 </li>
-                <li class="mob-nav__item">
-                  <a href="./portfolio.html" class="mob-nav__link">Портфоліо</a>
-                </li>
-                <li class="mob-nav__item">
-                  <a href="./index.html" class="mob-nav__link">Контакти</a>
+                <li>
+                  <a class="mob-mail" href="mailto:info@devstudio.com"> info@devstudio.com </a>
                 </li>
               </ul>
-            </nav>
-          </div>
 
-          <div class="mob-menu__bottom">
-            <ul class="mob-contact list">
-              <li>
-                <a class="mob-phone" href="tel:+380961111111"> +38 096 111 11 11 </a>
-              </li>
-              <li>
-                <a class="mob-mail" href="mailto:info@devstudio.com"> info@devstudio.com </a>
-              </li>
-            </ul>
+              <ul class="menu__smm-list list">
+                <li class="menu__smm-item">
+                  <a class="menu__smm-link" href="">Instagram</a>
+                </li>
 
-            <ul class="menu__smm-list list">
-              <li>
-                <a class="menu__smm-link" href="">Instagram</a>
-              </li>
-              <span class="smm__item">|</span>
-              <li>
-                <a class="menu__smm-link" href="">Twitter</a>
-              </li>
-              <span class="smm__item">|</span>
-              <li>
-                <a class="menu__smm-link" href="">Facebook</a>
-              </li>
-              <span class="smm__item">|</span>
-              <li>
-                <a class="menu__smm-link" href="">LinkedIn</a>
-              </li>
-            </ul>
+                <li class="menu__smm-item">
+                  <a class="menu__smm-link" href="">Twitter</a>
+                </li>
+
+                <li class="menu__smm-item">
+                  <a class="menu__smm-link" href="">Facebook</a>
+                </li>
+
+                <li class="menu__smm-item">
+                  <a class="menu__smm-link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+
     </header>
     <!--Головний-контент-->
     <main>
@@ -324,11 +326,17 @@
           <ul class="team__list list">
             <li class="specialist__box">
               <img
-                srcset="./images/team/team-1.jpg 1x, ./images/team/team-retina/team-1-2x.jpg 2x"
-                src="./images/tea/team-1.jpg"
-                alt="our-team-1"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/spec-1/spec-1-270.jpg 270w,
+                  ./images/team/spec-1/spec-1-354.jpg 354w,
+                  ./images/team/spec-1/spec-1-450.jpg 450w,
+                  ./images/team/spec-1/spec-1-540.jpg 540w,
+                  ./images/team/spec-1/spec-1-708.jpg 708w,
+                  ./images/team/spec-1/spec-1-900.jpg 900w
+                "
+                src="./images/team/spec-1/spec-1-270.jpg"
+                alt="spec-1"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <div class="specialist__info">
                 <h3 class="name">Ігор Дем'яненко</h3>
@@ -371,11 +379,17 @@
 
             <li class="specialist__box">
               <img
-                srcset="./images/team/team-2.jpg 1x, ./images/team/team-retina/team-2-2x.jpg 2x"
-                src="./images/team-2.jpg"
-                alt="our-team-2"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/spec-2/spec-2-270.jpg 270w,
+                  ./images/team/spec-2/spec-2-354.jpg 354w,
+                  ./images/team/spec-2/spec-2-450.jpg 450w,
+                  ./images/team/spec-2/spec-2-540.jpg 540w,
+                  ./images/team/spec-2/spec-2-708.jpg 708w,
+                  ./images/team/spec-2/spec-2-900.jpg 900w
+                "
+                src="./images/team/spec-2/spec-2-270.jpg"
+                alt="spec-1"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <div class="specialist__info">
                 <h3 class="name">Ольга Рєпіна</h3>
@@ -418,11 +432,17 @@
 
             <li class="specialist__box">
               <img
-                srcset="./images/team/team-3.jpg 1x, ./images/team/team-retina/team-3-2x.jpg 2x"
-                src="./images/team-3.jpg"
-                alt="our-team-3"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/spec-3/spec-3-270.jpg 270w,
+                  ./images/team/spec-3/spec-3-354.jpg 354w,
+                  ./images/team/spec-3/spec-3-450.jpg 450w,
+                  ./images/team/spec-3/spec-3-540.jpg 540w,
+                  ./images/team/spec-3/spec-3-708.jpg 708w,
+                  ./images/team/spec-3/spec-3-900.jpg 900w
+                "
+                src="./images/team/spec-3/spec-3-270.jpg"
+                alt="spec-3"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <div class="specialist__info">
                 <h3 class="name">Микола Тарасов</h3>
@@ -465,11 +485,17 @@
 
             <li class="specialist__box">
               <img
-                srcset="./images/team/team-4.jpg 1x, ./images/team/team-retina/team-4-2x.jpg 2x"
-                src="./images/team-4.jpg"
-                alt="our-team-4"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/spec-4/spec-4-270.jpg 270w,
+                  ./images/team/spec-4/spec-4-354.jpg 354w,
+                  ./images/team/spec-4/spec-4-450.jpg 450w,
+                  ./images/team/spec-4/spec-4-540.jpg 540w,
+                  ./images/team/spec-4/spec-4-708.jpg 708w,
+                  ./images/team/spec-4/spec-4-900.jpg 900w
+                "
+                src="./images/team/spec-4/spec-4-270.jpg"
+                alt="spec-4"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <div class="specialist__info">
                 <h3 class="name">Михайло Єрмаков</h3>
@@ -572,68 +598,70 @@
     <!--Підвал-сайту-->
     <footer class="footer">
       <div class="footer__container">
-        <div class="adress__box">
-          <a href="./index.html" class="logo logo-footer"
-            ><span>Web</span><span class="wht">Studio</span></a
-          >
-          <address class="adress">
-            <ul class="adress__list list">
-              <li class="adress__street">
-                <a
-                  href="https://goo.gl/maps/UaeHGTFbajZYQoQx9"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  м. Київ, пр-т Лесі Українки, 26
+        <div class="footer-top">
+          <div class="adress__box">
+            <a href="./index.html" class="logo logo-footer"
+              ><span>Web</span><span class="wht">Studio</span></a
+            >
+            <address class="adress">
+              <ul class="adress__list list">
+                <li class="adress__street">
+                  <a
+                    href="https://goo.gl/maps/UaeHGTFbajZYQoQx9"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    м. Київ, пр-т Лесі Українки, 26
+                  </a>
+                </li>
+
+                <li class="adress__contact">
+                  <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+
+                <li class="adress__contact">
+                  <a href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="smm__box">
+            <h2 class="smm__title-footer">Приєднуйтесь</h2>
+            <ul class="smm__list list">
+              <li class="bgc__icon-footer">
+                <a class="smm__link-footer" href="">
+                  <svg class="smm__icon-footer">
+                    <use xlink:href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
 
-              <li class="adress__contact">
-                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <li class="bgc__icon-footer">
+                <a class="smm__link-footer" href="">
+                  <svg class="smm__icon-footer">
+                    <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
 
-              <li class="adress__contact">
-                <a href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="bgc__icon-footer">
+                <a class="smm__link-footer" href="">
+                  <svg class="smm__icon-footer">
+                    <use xlink:href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="bgc__icon-footer">
+                <a class="smm__link-footer" href="">
+                  <svg class="smm__icon-footer">
+                    <use xlink:href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="smm__box">
-          <h2 class="smm__title-footer">Приєднуйтесь</h2>
-          <ul class="smm__list list">
-            <li class="bgc__icon-footer">
-              <a class="smm__link-footer" href="">
-                <svg class="smm__icon-footer">
-                  <use xlink:href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="bgc__icon-footer">
-              <a class="smm__link-footer" href="">
-                <svg class="smm__icon-footer">
-                  <use xlink:href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="bgc__icon-footer">
-              <a class="smm__link-footer" href="">
-                <svg class="smm__icon-footer">
-                  <use xlink:href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="bgc__icon-footer">
-              <a class="smm__link-footer" href="">
-                <svg class="smm__icon-footer">
-                  <use xlink:href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="subscribe__box">
@@ -670,22 +698,22 @@
     </script> -->
 
     <script>
-  (() => {
-    const refs = {
-      openModalBtn: document.querySelector('[data-modal-open]'),
-      closeModalBtn: document.querySelector('[data-modal-close]'),
-      modal: document.querySelector('[data-modal]'),
-      body: document.querySelector('body'),
-    };
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector('[data-modal-open]'),
+          closeModalBtn: document.querySelector('[data-modal-close]'),
+          modal: document.querySelector('[data-modal]'),
+          body: document.querySelector('body'),
+        };
 
-    refs.openModalBtn.addEventListener('click', toggleModal);
-    refs.closeModalBtn.addEventListener('click', toggleModal);
+        refs.openModalBtn.addEventListener('click', toggleModal);
+        refs.closeModalBtn.addEventListener('click', toggleModal);
 
-    function toggleModal() {
-      refs.modal.classList.toggle('is-hidden');
-      refs.body.classList.toggle('no-scroll');
-    }
-  })();
+        function toggleModal() {
+          refs.modal.classList.toggle('is-hidden');
+          refs.body.classList.toggle('no-scroll');
+        }
+      })();
     </script>
 
     <script>

@@ -4,6 +4,17 @@
 
 .team__title {
   margin-bottom: 50px;
+  font-style: normal;
+  text-align: center;
+  color: var(--primary-text-collor);
+
+  @media screen and (max-width: 1200px) {
+    @include font(700, 28px, 1.16, 0.03em);
+  }
+
+  @include desktop {
+    @include font(700, 36px, 1.16, 0.03em);
+  }
 }
 
 .team__list {
@@ -15,17 +26,15 @@
     gap: 30px;
   }
 
-@media screen and (min-width: 1200px) {
-  flex-wrap: nowrap;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
   }
-
 }
 
 .specialist__box {
   align-items: center;
   background-color: var(--white-text-collor);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin-bottom: 30px;
 
@@ -33,9 +42,7 @@
     display: inline-block;
     width: calc((100% - 30px) / 2);
   }
-
 }
-
 
 .specialist__info {
   padding-top: 30px;
@@ -47,12 +54,12 @@
 }
 
 .name {
-  @include font (500, 16px, 1.2, 0.03em);
+  @include font(500, 16px, 1.2, 0.03em);
   color: var(--title-text-color);
 }
 
 .specialisation {
-  @include font (400, 16px, 1.2, 0.03em);
+  @include font(400, 16px, 1.2, 0.03em);
   color: var(--secondary-text-collor);
   margin-bottom: 20px;
 }
@@ -61,7 +68,3 @@
 
 //   margin-top: 16px;
 // }
-
-
-
-

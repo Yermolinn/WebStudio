@@ -72,63 +72,65 @@
           aria-expanded="false"
           aria-controls="mob-menu"
         >
-          <svg width="40px" height="40px">
+          <svg width="24px" height="16px">
             <use xlink:href="./images/icons.svg#icon-menu-btn"></use>
           </svg>
         </button>
       </div>
 
       <!--Mob-Menu-->
-      <div class="mob-menu js-menu-container" id="mob-menu">
-        <div class="mob-menu__container">
-          <div class="mob-menu__top">
-            <button type="button" class="menu-toggle js-close-menu">
-              <svg width="40px" height="40px">
-                <use xlink:href="./images/icons.svg#icon-close"></use>
-              </svg>
-            </button>
-            <nav class="mob-nav">
-              <ul class="mob-nav__list list">
-                <li class="mob-nav__item">
-                  <a href="./index.html" class="mob-nav__link">Студія</a>
+      <div class="">
+        <div class="mob-menu js-menu-container" id="mob-menu">
+          <div class="mob-menu__container">
+            <div class="mob-menu__top">
+              <button type="button" class="menu-toggle js-close-menu">
+                <svg width="18px" height="18px" class="menu-close-icon">
+                  <use xlink:href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+              <nav class="mob-nav">
+                <ul class="mob-nav__list list">
+                  <li class="mob-nav__item">
+                    <a href="./index.html" class="mob-nav__link">Студія</a>
+                  </li>
+                  <li class="mob-nav__item">
+                    <a href="./portfolio.html" class="mob-nav__link">Портфоліо</a>
+                  </li>
+                  <li class="mob-nav__item">
+                    <a href="./index.html" class="mob-nav__link">Контакти</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="mob-menu__bottom">
+              <ul class="mob-contact list">
+                <li>
+                  <a class="mob-phone" href="tel:+380961111111"> +38 096 111 11 11 </a>
                 </li>
-                <li class="mob-nav__item">
-                  <a href="./portfolio.html" class="mob-nav__link">Портфоліо</a>
-                </li>
-                <li class="mob-nav__item">
-                  <a href="./index.html" class="mob-nav__link">Контакти</a>
+                <li>
+                  <a class="mob-mail" href="mailto:info@devstudio.com"> info@devstudio.com </a>
                 </li>
               </ul>
-            </nav>
-          </div>
 
-          <div class="mob-menu__bottom">
-            <ul class="mob-contact list">
-              <li>
-                <a class="mob-phone" href="tel:+380961111111"> +38 096 111 11 11 </a>
-              </li>
-              <li>
-                <a class="mob-mail" href="mailto:info@devstudio.com"> info@devstudio.com </a>
-              </li>
-            </ul>
+              <ul class="menu__smm-list list">
+                <li class="menu__smm-item">
+                  <a class="menu__smm-link" href="">Instagram</a>
+                </li>
 
-            <ul class="menu__smm-list list">
-              <li>
-                <a class="menu__smm-link" href="">Instagram</a>
-              </li>
-              <span class="smm__item">|</span>
-              <li>
-                <a class="menu__smm-link" href="">Twitter</a>
-              </li>
-              <span class="smm__item">|</span>
-              <li>
-                <a class="menu__smm-link" href="">Facebook</a>
-              </li>
-              <span class="smm__item">|</span>
-              <li>
-                <a class="menu__smm-link" href="">LinkedIn</a>
-              </li>
-            </ul>
+                <li class="menu__smm-item">
+                  <a class="menu__smm-link" href="">Twitter</a>
+                </li>
+
+                <li class="menu__smm-item">
+                  <a class="menu__smm-link" href="">Facebook</a>
+                </li>
+
+                <li class="menu__smm-item">
+                  <a class="menu__smm-link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -159,8 +161,6 @@
                 <div class="project__info">
                   <h2 class="project__title">Технокряк</h2>
                   <p class="project__text">Веб-дизайн</p>
-
-
                 </div>
               </a>
             </li>
@@ -194,8 +194,6 @@
                 <div class="project__info">
                   <h2 class="project__title">Ресторан Seafood</h2>
                   <p class="project__text">Додаток</p>
-
-
                 </div>
               </a>
             </li>
@@ -308,68 +306,70 @@
     <!--Підвал-сайту-->
     <footer class="footer">
       <div class="footer__container">
-        <div class="adress__box">
-          <a href="./index.html" class="logo logo-footer"
-            ><span>Web</span><span class="wht">Studio</span></a
-          >
-          <address class="adress">
-            <ul class="adress__list list">
-              <li class="adress__street">
-                <a
-                  href="https://goo.gl/maps/UaeHGTFbajZYQoQx9"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  м. Київ, пр-т Лесі Українки, 26
+        <div class="footer-top">
+          <div class="adress__box">
+            <a href="./index.html" class="logo logo-footer"
+              ><span>Web</span><span class="wht">Studio</span></a
+            >
+            <address class="adress">
+              <ul class="adress__list list">
+                <li class="adress__street">
+                  <a
+                    href="https://goo.gl/maps/UaeHGTFbajZYQoQx9"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    м. Київ, пр-т Лесі Українки, 26
+                  </a>
+                </li>
+
+                <li class="adress__contact">
+                  <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+
+                <li class="adress__contact">
+                  <a href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="smm__box">
+            <h2 class="smm__title-footer">Приєднуйтесь</h2>
+            <ul class="smm__list list">
+              <li class="bgc__icon-footer">
+                <a class="smm__link-footer" href="">
+                  <svg class="smm__icon-footer">
+                    <use xlink:href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
 
-              <li class="adress__contact">
-                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <li class="bgc__icon-footer">
+                <a class="smm__link-footer" href="">
+                  <svg class="smm__icon-footer">
+                    <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
 
-              <li class="adress__contact">
-                <a href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="bgc__icon-footer">
+                <a class="smm__link-footer" href="">
+                  <svg class="smm__icon-footer">
+                    <use xlink:href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="bgc__icon-footer">
+                <a class="smm__link-footer" href="">
+                  <svg class="smm__icon-footer">
+                    <use xlink:href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="smm__box">
-          <h2 class="smm__title-footer">Приєднуйтесь</h2>
-          <ul class="smm__list list">
-            <li class="bgc__icon-footer">
-              <a class="smm__link-footer" href="">
-                <svg class="smm__icon-footer">
-                  <use xlink:href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="bgc__icon-footer">
-              <a class="smm__link-footer" href="">
-                <svg class="smm__icon-footer">
-                  <use xlink:href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="bgc__icon-footer">
-              <a class="smm__link-footer" href="">
-                <svg class="smm__icon-footer">
-                  <use xlink:href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="bgc__icon-footer">
-              <a class="smm__link-footer" href="">
-                <svg class="smm__icon-footer">
-                  <use xlink:href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="subscribe__box">
