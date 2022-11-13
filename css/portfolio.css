@@ -92,6 +92,12 @@ textarea {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
 .container {
   width: 100%;
@@ -652,7 +658,7 @@ textarea {
   min-height: var(--header-height);
   background-color: var(--white-bgc-collor);
   border-bottom: 1px solid var(--high-line-collor);
-  z-index: 10000;
+  z-index: 100;
 }
 
 .menu {

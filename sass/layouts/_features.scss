@@ -25,21 +25,16 @@
     display: flex;
     flex-wrap: wrap;
   }
-  // & .title {
-  //   @include font (700, 14px, 1.14, 0.03em);
-  //   text-transform: uppercase;
-  //   color: var(--title-text-color);
-  //   @media (max-width: 480px) {
-  //     text-align: center;
-  //   }
-  // }
 }
 
 .features__title {
   @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: var(--title-text-color);
-  text-align: center;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .features__text {
@@ -51,12 +46,7 @@
 //     flex-wrap: wrap;
 // }
 
-// @media (min-width: 480px) {
-//   .feat-list {
-//     display: block;
-//     width: calc(100% - 30px);
-//       background-color: orange;
-//   }
+// 
 // }
 
 .features__item {
