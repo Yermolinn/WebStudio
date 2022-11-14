@@ -1,5 +1,5 @@
 .hero {
-  display: block;
+  // display: block;
   background-color: var(--footer-bgc-collor);
   height: 100%;
   margin: 0 auto;
@@ -8,8 +8,8 @@
   background-position: center;
 
   @media screen and (max-width: 767px) {
-    margin-top: 60px;
-    max-width: 480px;
+    // margin-top: 60px;
+    max-width: 1600px;
     height: 400px;
     padding: 118px 0;
     background-image: var(--gradient-bgc), url(../images/hero-mob.jpg);
@@ -20,8 +20,8 @@
   }
 
   @include tablet {
-    margin-top: 80px;
-    max-width: 768px;
+    // margin-top: 80px;
+    max-width: 1600px;
     height: 400px;
     padding: 118px 0;
     background-image: var(--gradient-bgc), url(../images/hero-tab.jpg);
@@ -32,7 +32,7 @@
   }
 
   @include desktop {
-    margin-top: 80px;
+    // margin-top: 80px;
     max-width: 1600px;
     height: 600px;
     padding: 200px 0;

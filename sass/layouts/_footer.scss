@@ -1,5 +1,5 @@
 .footer {
-  width: 100vw;
+  // width: 100vw;
   background-color: var(--footer-bgc-collor);
 }
 
@@ -52,6 +52,10 @@
 
 .logo-footer {
   justify-content: center;
+
+  @include desktop {
+    justify-content: left;
+    }
 }
 
 .adress__box {
@@ -65,6 +69,7 @@
 
   @include desktop {
     display: inline-block;
+    text-align: left;
   }
 }
 
@@ -110,7 +115,7 @@
 
 .subscribe {
   display: flex;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;

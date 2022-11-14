@@ -38,7 +38,9 @@
   border-radius: 0px 0px 4px 4px;
 
 @media screen and (max-width: 767px) {
-  margin-bottom: 30px;
+    &:not(:last-child) {
+    margin-bottom: 30px;
+    }
   }
 
   @include tablet {

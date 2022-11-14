@@ -57,6 +57,16 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+}
 
 input,
 textarea {
@@ -235,6 +245,11 @@ textarea {
   }
 }
 
+.mob-nav__link.current {
+  color: var(--accent-text-collor);
+  position: relative;
+}
+
 .mob-contact {
   margin-left: auto;
   margin-bottom: 64px;
@@ -289,6 +304,10 @@ textarea {
   text-decoration: none;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
   color: var(--accent-text-collor);
   transition: color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -700,7 +719,6 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 50;
-  overflow: auto;
 }
 @media screen and (max-width: 1200px) {
   .modal {
@@ -975,7 +993,6 @@ textarea::placeholder {
 }
 
 .hero {
-  display: block;
   background-color: var(--footer-bgc-collor);
   height: 100%;
   margin: 0 auto;
@@ -985,8 +1002,7 @@ textarea::placeholder {
 }
 @media screen and (max-width: 767px) {
   .hero {
-    margin-top: 60px;
-    max-width: 480px;
+    max-width: 1600px;
     height: 400px;
     padding: 118px 0;
     background-image: var(--gradient-bgc), url(../images/hero-mob.jpg);
@@ -1000,8 +1016,7 @@ textarea::placeholder {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    margin-top: 80px;
-    max-width: 768px;
+    max-width: 1600px;
     height: 400px;
     padding: 118px 0;
     background-image: var(--gradient-bgc), url(../images/hero-tab.jpg);
@@ -1015,7 +1030,6 @@ textarea::placeholder {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    margin-top: 80px;
     max-width: 1600px;
     height: 600px;
     padding: 200px 0;
@@ -1292,7 +1306,7 @@ textarea::placeholder {
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (max-width: 767px) {
-  .specialist__box {
+  .specialist__box:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -1407,7 +1421,6 @@ textarea::placeholder {
 }
 
 .footer {
-  width: 100vw;
   background-color: var(--footer-bgc-collor);
 }
 
@@ -1469,6 +1482,11 @@ textarea::placeholder {
 .logo-footer {
   justify-content: center;
 }
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    justify-content: left;
+  }
+}
 
 .adress__box {
   text-align: center;
@@ -1483,6 +1501,7 @@ textarea::placeholder {
 @media screen and (min-width: 1200px) {
   .adress__box {
     display: inline-block;
+    text-align: left;
   }
 }
 
@@ -1533,7 +1552,7 @@ textarea::placeholder {
 .subscribe {
   display: flex;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .subscribe {
     flex-wrap: wrap;
     justify-content: center;

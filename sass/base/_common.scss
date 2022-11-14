@@ -10,6 +10,14 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
+
+@media screen and (max-width: 767px) {
+        padding-top: 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 80px;
+    }
 }
 
 input,
