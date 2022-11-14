@@ -1002,7 +1002,7 @@ textarea::placeholder {
 }
 @media screen and (max-width: 767px) {
   .hero {
-    max-width: 1600px;
+    max-width: 480px;
     height: 400px;
     padding: 118px 0;
     background-image: var(--gradient-bgc), url(../images/hero-mob.jpg);
