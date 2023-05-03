@@ -785,9 +785,6 @@ textarea:focus {
 textarea::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-textarea:-ms-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
 textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }

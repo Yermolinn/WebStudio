@@ -885,6 +885,10 @@ textarea {
   transform: translatey(0);
 }
 
+.is-hidden {
+  display: none;
+}
+
 .footer {
   background-color: var(--footer-bgc-collor);
 }
